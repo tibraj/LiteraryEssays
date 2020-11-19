@@ -17,6 +17,7 @@ export const signup = (credentials, history) => {
             credentials: "include",
             method: "POST",
             headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(information)
         })
             .then(response => response.json())
             .then(json => {
@@ -25,6 +26,31 @@ export const signup = (credentials, history) => {
                 } else {
                     dispatch(setCurrentUser(json))
                     dispatch(clearSignup())
+                    history.push('/')
+                }
+            })
+            .catch(console.log)
+    }
+}
+
+export const login = (credentials, history) => {
+    return dispatch => {
+        const information = {
+            user: credentials
+        }
+        return fetch("http://localhost:3000/api/v1/login", {
+            credentials: "include",
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(information)
+        })
+            .then(response => response.json())
+            .then(json => {
+                if (json.error) {
+                    alert(json.error)
+                } else {
+                    dispatch(setCurrentUser(json))
+                    dispatch(clearLogin())
                     history.push('/')
                 }
             })
