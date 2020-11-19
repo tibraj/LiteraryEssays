@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const UserHome = ({currentUser, loggedIn}) => {
     return (
         <div>
-
+            {loggedIn ? <h1>{currentUser.name}'s Homepage</h1> : null}
         </div>
     )
 }
