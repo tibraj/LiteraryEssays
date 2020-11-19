@@ -58,6 +58,24 @@ export const login = (credentials, history) => {
     }
 }
 
+export const getCurrentUser = () => {
+    return dispatch => {
+        return fetch("http://localhost:3000/api/v1/get_current_user", {
+            credentials: "include",
+            method: "GET",
+            headers: {"Content-Type": "application/json"}
+        })
+            .then(response => response.json())
+            .then(json => {
+                if (json.error) {
+                    alert(json.eror)
+                } else {
+                    dispatch(setCurrentUser(json))
+                }
+            })
+            .catch(console.log)
+    }
+}
 
 
 export const clearCurrentUser = () => {
