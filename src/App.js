@@ -18,8 +18,10 @@ class App extends React.component {
     return (
       <div className="App">
         <h1>APP</h1>
+        <Switch>
         <Route exact path='/login' component={Login}/>
         <Route exact path='/signup' component={Signup}/>
+        </Switch>
       </div>
     )
   }
