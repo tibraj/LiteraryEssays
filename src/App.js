@@ -19,6 +19,7 @@ class App extends React.component {
       <div className="App">
         <h1>APP</h1>
         <Route exact path='/login' component={Login}/>
+        <Route exact path='/signup' component={Signup}/>
       </div>
     )
   }
