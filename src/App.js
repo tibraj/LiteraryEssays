@@ -7,12 +7,14 @@ import Welcome from './components/Welcome.js';
 import Signup from './components/Signup.js';
 
 
-function App() {
-  return (
-    <div className="App">
-      <h1>APP</h1>
-    </div>
-  );
+class App extends React.component {
+  render() {
+    return (
+      <div className="App">
+        <h1>APP</h1>
+      </div>
+    )
+  }
 }
 
 export default App;
