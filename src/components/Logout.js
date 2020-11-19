@@ -4,9 +4,14 @@ import { withRouter } from 'react-router-dom';
 import { logout } from '../actions/currentUser.js';
 
 const Logout = ({logout, history}) => {
+    const handleSubmit = event => {
+        event.preventDefault()
+        logout()
+        history.push('/')
+    }
     return (
-        <form>
-
+        <form onSubmit={handleSubmit}>
+            <input type="submit" value="Logout" />
         </form>
     )
 }
