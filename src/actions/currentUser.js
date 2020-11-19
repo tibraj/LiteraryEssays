@@ -1,3 +1,6 @@
+import { clearSignup } from './signup.js';
+import { clearLogin } from './login.js';
+
 export const setCurrentUser = user => {
     return {
         type: "SET_CURRENT_USER",
@@ -28,6 +31,8 @@ export const signup = (credentials, history) => {
             .catch(console.log)
     }
 }
+
+
 
 export const clearCurrentUser = () => {
     return {
