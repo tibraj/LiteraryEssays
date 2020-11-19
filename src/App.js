@@ -6,10 +6,11 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import Welcome from './components/Welcome.js';
 import Signup from './components/Signup.js';
 import Login from './components/Login.js';
+import UserHome from './components/UserHome.js';
 import { getCurrentUser } from './actions/currentUser.js';
 
 
-class App extends React.component {
+class App extends React.Component {
   componentDidMount() {
     this.props.getCurrentUser()
   }

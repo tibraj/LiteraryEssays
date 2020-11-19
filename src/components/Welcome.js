@@ -5,7 +5,7 @@ const Welcome = () => {
     return (
         <div>
             <h1>Welcome To React/Redux Essays</h1>
-            <Link to="/signup">Signup</Link>||||||||||||||<Link to="/signup">Signup</Link>
+            <Link to="/signup">Signup</Link>||||||||||||||<Link to="/login">Login</Link>
         </div>
     )
 }

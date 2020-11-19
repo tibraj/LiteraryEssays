@@ -10,7 +10,7 @@ const UserHome = ({currentUser, loggedIn}) => {
     )
 }
 
-mapStateToProps = ({currentUser}) => {
+const mapStateToProps = ({currentUser}) => {
     return {
         currentUser,
         loggedIn: !!currentUser

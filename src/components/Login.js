@@ -29,7 +29,7 @@ const Login = ({loginData, updateLogin, login, history}) => {
 
 const mapStateToProps = state => {
     return {
-        loginData: state.loginForm
+        loginData: state.login
     }
 }
 

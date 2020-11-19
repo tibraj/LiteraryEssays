@@ -30,7 +30,7 @@ const Signup = ({signupData, updateSignup, signup, history}) => {
 
 const mapStateToProps = state => {
     return {
-        signupData: state.signupForm
+        signupData: state.signup
     }
 }
 
