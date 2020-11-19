@@ -17,8 +17,14 @@ const Signup = ({}) => {
         event.preventDefault()
         signup(signupData, history)
     }
+
     return (
-        <form></form>
+        <form onSubmit={handleSubmit}>
+            <input placeholder="name" type="text" name="name" value={signupData.name} onChange={handleOnChange} />
+            <input placeholder="name" type="text" name="username" value={signupData.username} onChange={handleOnChange} />
+            <input placeholder="name" type="text" name="password" value={signupData.password} onChange={handleOnChange} />
+            <input type="submit" value="Signup" />
+        </form>
     )
 }
 
