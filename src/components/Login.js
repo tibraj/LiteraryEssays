@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { updateLogin } from '../actions/login.js'
 import { login } from '../actions/currentUser.js';
 
-const Login = ({}) => {
+const Login = ({loginData, updateLogin, login, history}) => {
     const handleOnChange = event => {
         const {name, value} = event.target
         const updatedInfo = {
@@ -27,4 +27,10 @@ const Login = ({}) => {
     )
 }
 
-export default Login
+const mapStateToProps = state => {
+    return {
+        loginData: state.loginForm
+    }
+}
+
+export default connect(mapStateToProps, {updateLogin, login})(Login)
