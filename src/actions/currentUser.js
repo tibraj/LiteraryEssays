@@ -83,3 +83,13 @@ export const clearCurrentUser = () => {
         type: "CLEAR_CURRENT_USER"
     }
 }
+
+export const logout = event => {
+    return dispatch => {
+        dispatch(clearCurrentUser())
+        return fetch("http://localhost:3000/api/v1/logout", {
+            credentials: "include",
+            method: "DELETE"
+        })
+    }
+}
