@@ -3,6 +3,9 @@ import './App.css';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, withRouter } from 'react-router-dom';
+import Welcome from './components/Welcome.js';
+import Signup from './components/Signup.js';
+
 
 function App() {
   return (
