@@ -4,3 +4,9 @@ export const updateLogin = data => {
         data
     }
 }
+
+export const clearLogin = () => {
+    return {
+        type: "CLEAR_LOGIN"
+    }
+}
