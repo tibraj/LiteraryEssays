@@ -18,7 +18,7 @@ class App extends React.component {
     return (
       <div className="App">
         <h1>APP</h1>
-        
+        <Route exact path='/login' component={Login}/>
       </div>
     )
   }
