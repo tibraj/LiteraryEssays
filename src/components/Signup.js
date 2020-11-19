@@ -12,6 +12,11 @@ const Signup = ({}) => {
         }
         updateSignup(updatedInfo)
     }
+
+    const handleSubmit = event => {
+        event.preventDefault()
+        signup(signupData, history)
+    }
     return (
         <form></form>
     )
