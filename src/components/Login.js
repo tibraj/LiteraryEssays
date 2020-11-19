@@ -12,6 +12,12 @@ const Login = ({}) => {
         }
         updateLogin(updatedInfo)
     }
+
+    const handleSubmit = event => {
+        event.preventDefault()
+        login(loginData, history)
+    }
+
     return (
         <form>
         </form>
