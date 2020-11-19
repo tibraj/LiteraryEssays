@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const UserHome = ({}) => {
+const UserHome = ({currentUser, loggedIn}) => {
     return (
         <div>
 
@@ -10,4 +10,11 @@ const UserHome = ({}) => {
     )
 }
 
-export default UserHome
+mapStateToProps = ({currentUser}) => {
+    return {
+        currentUser,
+        loggedIn: !!currentUser
+    }
+}
+
+export default connect(mapStateToProps)(UserHome)
