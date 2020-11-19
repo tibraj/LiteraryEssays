@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { updateSignup } from '../actions/signup.js'
 import { signup } from '../actions/currentUser.js';
 
-const Signup = ({}) => {
+const Signup = ({signupData, updateSignup, signup, history}) => {
     const handleOnChange = event => {
         const {name, value} = event.target
         const updatedInfo = {
@@ -28,4 +28,10 @@ const Signup = ({}) => {
     )
 }
 
-export default Signup
+const mapStateToProps = state => {
+    return {
+        signupData: state.signupForm
+    }
+}
+
+export default connect(mapStateToProps, {updateSignup, signup})(Signup)
