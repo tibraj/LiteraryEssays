@@ -4,3 +4,9 @@ export const updateSignup = data => {
         data
     }
 }
+
+export const clearSignup = () => {
+    return {
+        type: "CLEAR_SIGNUP"
+    }
+}
