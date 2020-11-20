@@ -4,12 +4,14 @@ import signup from './reducers/signup.js';
 import login from './reducers/login.js';
 import currentUser from './reducers/currentUser.js';
 import newEssayForm from './reducers/newEssayForm.js';
+import essays from './reducers/essays.js';
 
 const reducer = combineReducers({
     signup,
     login,
     currentUser,
-    newEssayForm
+    newEssayForm,
+    essays
 })
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
