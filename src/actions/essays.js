@@ -26,3 +26,30 @@ export const deleteEssay = essayId => {
         essayId
     }
 }
+
+export const createEssay = (data, history) => {
+    return dispatch => {
+        const essayInformation = {
+            title: data.title,
+            content: data.content,
+            user_id: data.userId 
+        }
+        return fetch("http://localhost:3000/api/v1/essays", {
+            credentials: "include",
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(essayInformation)
+        })
+            .then(response => response.json())
+            .then(response => {
+                if (response.error) {
+                    alert(response.error)
+                } else {
+                    dispatch(addEssay(response.data))
+                    dispatch(clearEssayForm())
+                    history.push(`/essays/${response.data.id}`)
+                }
+            })
+            .catch(console.log)
+    }
+}
