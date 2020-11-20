@@ -8,6 +8,8 @@ export default (state=initialState, action) => {
             return state.concat(action.essay)
         case "DELETE_ESSAY":
             return state.filter(essay => essay.id === action.essayId ? false : true)
+        case "CLEAR_ESSAYS":
+            return initialState
         default:
             return state
     }
