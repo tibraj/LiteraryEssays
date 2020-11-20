@@ -17,4 +17,11 @@ const EssayForm = ({data, updateEssayForm, createEssay, userId, essay, history})
     )
 }
 
-export default EssayForm
+const mapStateToProps = state => {
+    const userId = state.currentUser ? state.currentUser.id : ""
+    return {
+        data: state.EssayForm,
+        userId
+    }
+}
+export default connect(mapStateToProps, {updateEssayForm, createEssay})(EssayForm)
