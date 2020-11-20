@@ -12,3 +12,10 @@ export const clearEssays = () => {
         type: "CLEAR_ESSAYS"
     }
 }
+
+export const addEssay = essay => {
+    return {
+        type: "ADD_ESSAY",
+        essay
+    }
+}
