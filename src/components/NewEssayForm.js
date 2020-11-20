@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {updateEssayForm} from '../actions/newEssayForm.js';
 import {createEssay} from '../actions/essays.js'
 
-const EssayForm = ({data, updateEssayForm, createEssay, userId, essay, history}) => {
+const EssayForm = ({data, updateEssayForm, createEssay, userId, history}) => {
     const handleChange = event => {
         const {name, value} = event.target
         updateEssayForm(name, value)
@@ -13,7 +13,11 @@ const EssayForm = ({data, updateEssayForm, createEssay, userId, essay, history})
         createEssay({...data, userId}, history)
     }
     return (
-        <form></form>
+        <form onSubmit={handleSubmit}>
+            <input placeholder="title" name="title" value={data.title} onChange={handleChange} />
+            <textarea placeholder="content" name="content" value={data.content} onChange={handleChange} />
+            <input type="submit" value="Create Essay" />
+        </form>
     )
 }
 
