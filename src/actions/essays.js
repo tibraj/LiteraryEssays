@@ -73,3 +73,22 @@ export const deleteEssay = (essayId, history) => {
             .catch(console.log)
     }
 }
+
+export const getEssays = () => {
+    return dispatch => {
+        return fetch("http://localhost:3000/api/v1/essays", {
+            credentials: "include",
+            method: "GET",
+            headers: {"Content-Type": "application/json"}
+        })
+            .then(response => response.json())
+            .then(response => {
+                if (response.error) {
+                    alert(response.error)
+                } else {
+                    dispatch(setEssays(response.data))
+                }
+            })
+            .catch(console.log)
+    }
+}
