@@ -6,3 +6,9 @@ export const setEssays = essays => {
         essays
     }
 }
+
+export const clearEssays = () => {
+    return {
+        type: "CLEAR_ESSAYS"
+    }
+}
