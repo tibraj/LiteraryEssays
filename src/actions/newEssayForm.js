@@ -5,3 +5,9 @@ export const updateEssayForm = (name, value) => {
         data
     }
 }
+
+export const clearEssayForm = () => {
+    return {
+        type: "CLEAR_ESSAY_FORM"
+    }
+}
