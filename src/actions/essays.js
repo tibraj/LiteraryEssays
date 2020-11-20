@@ -53,3 +53,23 @@ export const createEssay = (data, history) => {
             .catch(console.log)
     }
 }
+
+export const deleteEssay = (essayId, history) => {
+    return dispatch => {
+        return fetch(`http://localhost:3000/api/v1/essays/${essayId}`, {
+            credentials: "include",
+            method: "DELETE",
+            headers: {"Content-Type": "application/json"}
+        })
+            .then(response => response.json())
+            .then(response => {
+                if (response.error) {
+                    alert(response.error)
+                } else {
+                    dispatch(deleteEssay(essayId))
+                    history.push(`/essays`)
+                }
+            })
+            .catch(console.log)
+    }
+}
