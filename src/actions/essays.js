@@ -19,3 +19,10 @@ export const addEssay = essay => {
         essay
     }
 }
+
+export const deleteEssay = essayId => {
+    return {
+        type: "DELETE_ESSAY",
+        essayId
+    }
+}
