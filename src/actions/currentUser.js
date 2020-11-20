@@ -35,14 +35,11 @@ export const signup = (credentials, history) => {
 
 export const login = (credentials, history) => {
     return dispatch => {
-        const information = {
-            user: credentials
-        }
         return fetch("http://localhost:3000/api/v1/login", {
             credentials: "include",
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(information)
+            body: JSON.stringify(credentials)
         })
             .then(response => response.json())
             .then(json => {
