@@ -11,6 +11,8 @@ export default (state=initialState, action) => {
                 [action.data.name]: action.data.value
             }
             return values
+        case "CLEAR_ESSAY_FORM":
+            return initialState
         default:
             return state
     }
