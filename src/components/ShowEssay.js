@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ShowEssay = ({}) => {
+const ShowEssay = ({ essay }) => {
     return (
-        <div></div>
+        essay ? 
+            <div>
+                <h1>{essay.title}</h1>
+                <br></br>
+                <p>{essay.content}</p>
+            </div> 
+        : 
+            <p>There is no essay.</p>
     )
 }
 
