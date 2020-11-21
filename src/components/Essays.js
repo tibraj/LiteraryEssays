@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const Essays = ({Essays}) => {
-    const userEssays = Essays.length > 0 ?
-    Essays.map (essay => (
+const Essays = ({essays}) => {
+    const userEssays = essays.length > 0 ?
+    essays.map (essay => (
         <div>
             <Link to={`/essays/${essay.id}`}><h1>{essay.title}</h1></Link>
             <br></br>
@@ -16,9 +16,9 @@ const Essays = ({Essays}) => {
     )
 }
 
-const mapStateToProps = ({Essays}) => {
+const mapStateToProps = ({essays}) => {
     return {
-        Essays
+        essays
     }
 }
 export default connect(mapStateToProps)(Essays)

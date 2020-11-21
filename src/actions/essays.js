@@ -87,7 +87,7 @@ export const getEssays = () => {
                 if (response.error) {
                     alert(response.error)
                 } else {
-                    dispatch(setEssays(response.data))
+                    dispatch(setEssays(response))
                 }
             })
             .catch(console.log)
