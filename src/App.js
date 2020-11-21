@@ -8,6 +8,7 @@ import Signup from './components/Signup.js';
 import Login from './components/Login.js';
 import UserHome from './components/UserHome.js';
 import { getCurrentUser } from './actions/currentUser.js';
+import NewEssayForm from './components/NewEssayForm.js';
 
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
         <Switch>
         <Route exact path='/login' component={Login}/>
         <Route exact path='/signup' component={Signup}/>
+        <Route exact path='/essays/new' component={NewEssayForm}/>
         </Switch>
       </div>
     )

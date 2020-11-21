@@ -7,6 +7,7 @@ const UserHome = ({currentUser, loggedIn}) => {
     return (
         <div>
             {loggedIn ? <h1>{currentUser.name}'s Homepage</h1> : null}
+            <NavLink exact to="/essays/new">New Essay</NavLink>
             <Logout />
         </div>
     )

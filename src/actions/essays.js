@@ -34,6 +34,7 @@ export const createEssay = (data, history) => {
             content: data.content,
             user_id: data.userId 
         }
+        console.log(essayInformation)
         return fetch("http://localhost:3000/api/v1/essays", {
             credentials: "include",
             method: "POST",
@@ -43,18 +44,18 @@ export const createEssay = (data, history) => {
             .then(response => response.json())
             .then(response => {
                 if (response.error) {
-                    alert(response.error)
+                    console.log(response.error)
                 } else {
-                    dispatch(addEssay(response.data))
+                    dispatch(addEssay(response))
                     dispatch(clearEssayForm())
-                    history.push(`/essays/${response.data.id}`)
+                    history.push(`/essays/${response.id}`)
                 }
             })
             .catch(console.log)
     }
 }
 
-export const deleteEssay = (essayId, history) => {
+export const removeEssay = (essayId, history) => {
     return dispatch => {
         return fetch(`http://localhost:3000/api/v1/essays/${essayId}`, {
             credentials: "include",

@@ -5,6 +5,7 @@ import {createEssay} from '../actions/essays.js'
 
 const EssayForm = ({data, updateEssayForm, createEssay, userId, history}) => {
     const handleChange = event => {
+        console.log(data)
         const {name, value} = event.target
         updateEssayForm(name, value)
     }
@@ -24,7 +25,7 @@ const EssayForm = ({data, updateEssayForm, createEssay, userId, history}) => {
 const mapStateToProps = state => {
     const userId = state.currentUser ? state.currentUser.id : ""
     return {
-        data: state.EssayForm,
+        data: state.newEssayForm,
         userId
     }
 }
