@@ -16,7 +16,7 @@ const Essays = ({Essays}) => {
     )
 }
 
-mapStateToProps = ({Essays}) => {
+const mapStateToProps = ({Essays}) => {
     return {
         Essays
     }

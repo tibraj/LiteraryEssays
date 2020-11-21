@@ -1,5 +1,6 @@
 import { clearSignup } from './signup.js';
 import { clearLogin } from './login.js';
+import { getEssays } from './essays.js';
 
 export const setCurrentUser = user => {
     return {
@@ -26,6 +27,7 @@ export const signup = (credentials, history) => {
                 } else {
                     dispatch(setCurrentUser(json))
                     dispatch(clearSignup())
+                    dispatch(getEssays())
                     history.push('/')
                 }
             })
@@ -48,6 +50,7 @@ export const login = (credentials, history) => {
                 } else {
                     dispatch(setCurrentUser(json))
                     dispatch(clearLogin())
+                    dispatch(getEssays())
                     history.push('/')
                 }
             })
@@ -68,6 +71,7 @@ export const getCurrentUser = () => {
                     alert(json.error)
                 } else {
                     dispatch(setCurrentUser(json))
+                    dispatch(getEssays())
                 }
             })
             .catch(console.log)
