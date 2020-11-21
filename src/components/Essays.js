@@ -8,4 +8,9 @@ const Essays = ({}) => {
     )
 }
 
-export default Essays
+mapStateToProps = ({Essays}) => {
+    return {
+        Essays
+    }
+}
+export default connect(mapStateToProps)(Essays)
