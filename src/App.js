@@ -9,6 +9,8 @@ import Login from './components/Login.js';
 import UserHome from './components/UserHome.js';
 import { getCurrentUser } from './actions/currentUser.js';
 import NewEssayForm from './components/NewEssayForm.js';
+import ShowEssay from './components/ShowEssay.js';
+
 
 
 class App extends React.Component {
@@ -17,7 +19,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {loggedIn} = this.props
+    const {loggedIn, essays} = this.props
     return (
       <div className="App">
         <h1>APP</h1>
@@ -26,6 +28,10 @@ class App extends React.Component {
         <Route exact path='/login' component={Login}/>
         <Route exact path='/signup' component={Signup}/>
         <Route exact path='/essays/new' component={NewEssayForm}/>
+        <Route exact path='/essays/:id' render={props => {
+          const essay = essays.find(essay => essay.id == props.match.params.id) 
+        return <ShowEssay essay ={essay}{...props} /> } }/>
+
         </Switch>
       </div>
     )
@@ -34,7 +40,8 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    loggedIn: !!state.currentUser
+    loggedIn: !!state.currentUser,
+    essays: state.essays
   }
 }
 
