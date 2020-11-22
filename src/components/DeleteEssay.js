@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { removeEssay } from '../actions/essay.js';
+import { removeEssay } from '../actions/essays.js';
 
-const DeleteEssay = ({removeEssay, history}) => {
+const DeleteEssay = ({removeEssay, userId, history}) => {
     const handleSubmit = event => {
         event.preventDefault()
         removeEssay()
@@ -16,4 +16,10 @@ const DeleteEssay = ({removeEssay, history}) => {
     )
 }
 
-export default withRouter(connect(null, {removeEssay})(DeleteEssay))
+const mapStateToProps = state => {
+    const userId = state.currentUser ? state.currentUser.id : ""
+    return {
+        userId
+    }
+}
+export default withRouter(connect(mapStateToProps, {removeEssay})(DeleteEssay))
