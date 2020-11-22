@@ -4,7 +4,11 @@ import { withRouter } from 'react-router-dom';
 import { removeEssay } from '../actions/essay.js';
 
 const DeleteEssay = ({removeEssay, history}) => {
-    
+    const handleSubmit = event => {
+        event.preventDefault()
+        removeEssay()
+        history.push('/')
+    }
     return (
         <form>
 
@@ -12,4 +16,4 @@ const DeleteEssay = ({removeEssay, history}) => {
     )
 }
 
-export default withRouter(connect(null, {removeEssay})(DeleteEssay)
+export default withRouter(connect(null, {removeEssay})(DeleteEssay))
