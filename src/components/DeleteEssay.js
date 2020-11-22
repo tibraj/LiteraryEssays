@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { removeEssay } from '../actions/essay.js';
 
-const DeleteEssay = ({}) => {
+const DeleteEssay = ({removeEssay, history}) => {
     
     return (
         <form>
@@ -12,4 +12,4 @@ const DeleteEssay = ({}) => {
     )
 }
 
-export default DeleteEssay
+export default withRouter(connect(null, {removeEssay})(DeleteEssay)
