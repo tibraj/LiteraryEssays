@@ -10,8 +10,8 @@ const DeleteEssay = ({removeEssay, history}) => {
         history.push('/')
     }
     return (
-        <form>
-
+        <form onSubmit={handleSubmit}>
+            <input type="submit" value="Delete Essay" />
         </form>
     )
 }
