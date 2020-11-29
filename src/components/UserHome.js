@@ -7,10 +7,10 @@ import Essays from './Essays.js';
 const UserHome = ({currentUser, loggedIn}) => {
     return (
         <div>
-            {loggedIn ? <h1>{currentUser.name}'s Homepage</h1> : null}
-            <NavLink exact to="/essays/new">New Essay</NavLink>
+            <NavLink exact to="/essays/new" className="nav">New Essay</NavLink>
+            <NavLink exact to="/essays" className="nav">Essays</NavLink>
             <Logout />
-            <Essays />
+            {loggedIn ? <h1>{currentUser.name}'s Essays</h1> : null}
         </div>
     )
 }

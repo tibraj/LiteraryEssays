@@ -11,7 +11,7 @@ const Essays = ({essays}) => {
             <NavLink exact to={`/essays/${essay.id}`}><h1>{essay.title}</h1></NavLink>
             <br></br>
             <p>{essay.content}</p>
-
+            <p>_____________________________________________________________________________________________________________________</p>
         </div> 
     )) : null
     return (

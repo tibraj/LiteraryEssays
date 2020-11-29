@@ -10,6 +10,7 @@ import UserHome from './components/UserHome.js';
 import { getCurrentUser } from './actions/currentUser.js';
 import NewEssayForm from './components/NewEssayForm.js';
 import ShowEssay from './components/ShowEssay.js';
+import Essays from './components/Essays.js';
 
 
 
@@ -27,6 +28,7 @@ class App extends React.Component {
         <Switch>
         <Route exact path='/login' component={Login}/>
         <Route exact path='/signup' component={Signup}/>
+        <Route exact path='/essays' component={Essays}/>
         <Route exact path='/essays/new' component={NewEssayForm}/>
         <Route exact path='/essays/:id' render={props => {
           const essay = essays.find(essay => essay.id == props.match.params.id) 
