@@ -6,7 +6,9 @@ const Welcome = () => {
         <div>
             <h1>Welcome To React/Redux Essays</h1>
             <br></br><br></br><br></br><br></br>
-            <Link to="/signup" className="btn">Signup</Link><br></br><br></br><Link to="/login" className="btn">Login</Link>
+            <Link to="/signup" >Signup</Link>
+            <br></br><br></br>
+            <Link to="/login" >Login</Link>
         </div>
     )
 }

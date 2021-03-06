@@ -7,11 +7,11 @@ const ShowEssay = ({ essay, removeEssay, history }) => {
     return (
         essay ? 
             <div>
-                <h1>{essay.title}</h1>
-                <br></br>
+                <h1>Show Page</h1>
+                <h2>{essay.title}</h2>
                 <p>{essay.content}</p>
                 <br></br>
-                <button onClick={() => removeEssay(essay.id, history)} className="deletebtn">Delete Essay</button>
+                <button onClick={() => removeEssay(essay.id, history)} >Delete Essay</button>
             </div> 
         : 
             <p>There is no essay.</p>

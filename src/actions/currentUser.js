@@ -28,7 +28,7 @@ export const signup = (credentials, history) => {
                     dispatch(setCurrentUser(json))
                     dispatch(clearSignup())
                     dispatch(getEssays())
-                    history.push('/')
+                    history.push('/home')
                 }
             })
             .catch(console.log)
@@ -51,7 +51,7 @@ export const login = (credentials, history) => {
                     dispatch(setCurrentUser(json))
                     dispatch(clearLogin())
                     dispatch(getEssays())
-                    history.push('/')
+                    history.push('/home')
                 }
             })
             .catch(console.log)

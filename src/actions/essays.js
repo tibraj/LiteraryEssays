@@ -34,7 +34,6 @@ export const createEssay = (data, history) => {
             content: data.content,
             user_id: data.userId 
         }
-        console.log(essayInformation)
         return fetch("http://localhost:3000/api/v1/essays", {
             credentials: "include",
             method: "POST",

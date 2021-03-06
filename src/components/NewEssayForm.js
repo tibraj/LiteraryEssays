@@ -11,16 +11,20 @@ const EssayForm = ({data, updateEssayForm, createEssay, userId, history}) => {
     }
     const handleSubmit = (event) => {
         event.preventDefault()
-        createEssay({...data, userId}, history)
+        createEssay({...data, userId}, history) 
     }
     return (
-        <form onSubmit={handleSubmit}>
-            <input placeholder="title" name="title" value={data.title} onChange={handleChange} />
+        <div>
+            <h1>Create a New Essay</h1>
             <br></br><br></br>
-            <textarea placeholder="content" name="content" value={data.content} onChange={handleChange} />
-            <br></br><br></br>
-            <input type="submit" className="btn" value="Create Essay" />
-        </form>
+            <form onSubmit={handleSubmit}>
+                <input placeholder="title" name="title" value={data.title} onChange={handleChange} />
+                <br></br><br></br>
+                <textarea placeholder="content" name="content" value={data.content} onChange={handleChange} />
+                <br></br><br></br>
+                <input type="submit" value="Create Essay" />
+            </form>
+        </div>
     )
 }
 
