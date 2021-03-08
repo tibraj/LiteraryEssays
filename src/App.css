@@ -1,1 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #fff;
+    text-align: center;
+  }
 
+  .button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    /* background-color: #004E7C; */
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+  }
+  .button-two {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    background-color: rgb(169, 169, 177);
+    /* background-color: #004E7C; */
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+  }
+  
+  .button:hover {
+    cursor: pointer;
+    color: #004966;
+    /* background-color: #DCE1E3; */
+  }
+
+  .button-two:hover {
+    cursor: pointer;
+    color: #004966;
+    /* background-color: #DCE1E3; */
+  }
+  
+  #nav {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    margin: 30px;
+    align-items: center;
+    border-bottom: #004966 2px solid;
+  }
+  
+  #nav a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  #nav a:hover {
+    cursor: pointer;
+    color: #004966;
+  }
+
+  .essay-form {
+    max-width: 800px;
+    height: 600px;
+	background: #FAFAFA;
+	padding: 30px;
+	margin: 50px auto;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+	border-radius: 10px;
+	border: 6px solid #004966;
+  }
+
+  .essay-form-title {
+      width: 80%;
+	  border: 2px solid #004966;
+  }
+
+  .essay-form-content {
+    width: 80%;
+    height: 95%;
+    border: 2px solid #004966;
+}
+
+h1, h2, p {
+    padding: 20px;
+}
+
+a:visited {
+    color: #004966
+}

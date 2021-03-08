@@ -10,8 +10,9 @@ const ShowEssay = ({ essay, removeEssay, history }) => {
                 <h1>Show Page</h1>
                 <h2>{essay.title}</h2>
                 <p>{essay.content}</p>
+                <p>{essay.user.name}</p>
                 <br></br>
-                <button onClick={() => removeEssay(essay.id, history)} >Delete Essay</button>
+                <button className="button-two" onClick={() => removeEssay(essay.id, history)} >Delete Essay</button>
             </div> 
         : 
             <p>There is no essay.</p>
@@ -19,3 +20,4 @@ const ShowEssay = ({ essay, removeEssay, history }) => {
 }
 
 export default connect(null, {removeEssay})(ShowEssay)
+
