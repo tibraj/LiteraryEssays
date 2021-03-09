@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const Welcome = () => {
     return (
         <div>
-            <h1>Welcome To React/Redux Essays</h1>
+            <h1>Today's Essays</h1>
             <br></br><br></br><br></br><br></br>
-            <Link to="/signup" >Signup</Link>
-            <br></br><br></br>
-            <Link to="/login" >Login</Link>
+            <Link to="/signup" className="signup-link">Signup</Link>
+            <Link to="/login" className="login-link">Login</Link>
+            <br></br><br></br><br/>
         </div>
     )
 }

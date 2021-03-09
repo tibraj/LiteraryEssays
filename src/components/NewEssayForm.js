@@ -16,12 +16,11 @@ const EssayForm = ({data, updateEssayForm, createEssay, userId, history}) => {
     return (
         <div>
             <h1>Create a New Essay</h1>
-            <br></br><br></br>
             <form onSubmit={handleSubmit} class="essay-form">
                 <input className="essay-form-title" placeholder="title" name="title" value={data.title} onChange={handleChange} />
                 <br></br><br></br>
                 <textarea className="essay-form-content" placeholder="content" name="content" value={data.content} onChange={handleChange} />
-                <br></br><br></br>
+                <br></br><br></br><br/>
                 <input className="button-two" type="submit" value="Create Essay" />
             </form>
         </div>

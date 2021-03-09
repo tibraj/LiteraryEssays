@@ -8,7 +8,7 @@ const Home = ({essays, currentUserName, userId}) => {
     
     return (
         recentEssay != undefined ?
-        <div>
+        <div className="essay">
             <h1>{currentUserName}'s Home</h1>
             <br></br>
             <NavLink exact to={`/essays/${recentEssay.id}`}><h2>{recentEssay.title}</h2></NavLink>

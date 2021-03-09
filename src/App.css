@@ -18,14 +18,24 @@
     padding: 5px 10px;
     border: none;
   }
+
   .button-two {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #000000;
-    background-color: rgb(169, 169, 177);
+    background-color: rgb(236, 236, 236);
     /* background-color: #004E7C; */
     margin-top: 5px;
     padding: 5px 10px;
     border: none;
+  }
+  
+  #delete-button {
+      align-self: center;
+      margin-left: 650px;
+      margin-right: 650px;
+      padding: 2px 4px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #000000;
   }
   
   .button:hover {
@@ -38,6 +48,12 @@
     cursor: pointer;
     color: #004966;
     /* background-color: #DCE1E3; */
+  }
+
+  #delete-button:hover {
+      color: #000000;
+      background-color: red;
+      cursor: pointer;
   }
   
   #nav {
@@ -71,12 +87,13 @@
 
   .essay-form-title {
       width: 80%;
+      height:7.5%;
 	  border: 2px solid #004966;
   }
 
   .essay-form-content {
     width: 80%;
-    height: 95%;
+    height: 90%;
     border: 2px solid #004966;
 }
 
@@ -87,3 +104,68 @@ h1, h2, p {
 a:visited {
     color: #004966
 }
+
+.signup-link {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-link {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#signup input[type="text"],
+#signup input[type="password"] {
+    outline: none;
+	box-sizing: content-box;
+    width: 30%;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+
+#signup input[type="text"]:focus,
+#signup input[type="password"]:focus {
+    box-shadow: 0 0 5px #43D1AF;
+	padding: 3%;
+	border: 1px solid #43D1AF;
+}
+
+#login input[type="text"],
+#login input[type="password"] {
+    outline: none;
+	box-sizing: content-box;
+    width: 30%;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+
+#login input[type="text"]:focus,
+#login input[type="password"]:focus {
+    box-shadow: 0 0 5px #43D1AF;
+	padding: 3%;
+	border: 1px solid #43D1AF;
+}
+
+.essay {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    left:10px;
+    border: 1px solid #004966;
+    border-radius: 1px;
+    text-align: center;
+    padding: 15px 5px;
+}
+
+.essay h2 {
+    text-decoration: underline;
+}
+
+
